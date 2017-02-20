@@ -1,0 +1,31 @@
+{
+    "name": "lilhamma/yii2-store",
+
+    "type": "yii2-extension",
+
+    "description": "Yet another module 4 da framework. Allows to perform typical stores contents accounting",
+    "keywords": ["yii2", "store", "storage", "accounting", "items", "goods"],
+
+    "license": "The Unlicense",
+    "support": {
+        "issues": "http://unlicense.org/",
+        "source": "https://github.com/lilhamma/yii2-store"
+    },
+    "authors": [
+        {
+            "name": "lilhamma",
+            "email": "lilhamma@ya.ru"
+        }
+    ],
+
+    "require": {
+        "yiisoft/yii2": "*",
+        "voskobovich/yii2-many-many-behavior": "^3.0"
+    },
+
+    "autoload": {
+        "psr-4": {
+            "lilhamma\\store\\": ""
+        }
+    }
+}
