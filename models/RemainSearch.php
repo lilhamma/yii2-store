@@ -8,7 +8,7 @@ use yii\data\ActiveDataProvider;
 use lilhamma\store\models\Remain;
 
 /**
- * RemainSearch represents the model behind the search form about `lilhamma\store\models\Remain`.
+ * RemainSearch represents the model behind the search form about `\lilhamma\store\models\Remain`.
  */
 class RemainSearch extends Remain
 {
