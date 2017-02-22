@@ -1,0 +1,22 @@
+use StoreModule;
+
+CREATE TABLE `user` (
+  `id` int(13) NOT NULL,
+  `name` varchar(255) COLLATE utf8_bin NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+INSERT INTO `user` (`id`, `name`) VALUES
+(1, 'lucky'),
+(2, 'shacky'),
+(3, 'Johny'),
+(4, 'Natashka'),
+(5, 'Kalash');
+
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `user`
+  MODIFY `id` int(13) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
