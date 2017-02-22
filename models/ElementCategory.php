@@ -8,10 +8,10 @@ use Yii;
  * This is the model class for table "store_element_category".
  *
  * @property integer $id
- * @property integer $name
+ * @property string $name
  * @property integer $parent_id
  *
- * @property Element[] $elements
+ * @property StoreElement[] $storeElements
  * @property ElementCategory $parent
  * @property ElementCategory[] $elementCategories
  */
@@ -31,8 +31,9 @@ class ElementCategory extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['name', 'parent_id'], 'required'],
-            [['name', 'parent_id'], 'integer'],
+            [['name'], 'required'],
+            [['parent_id'], 'integer'],
+            [['name'], 'string', 'max' => 255],
             [['parent_id'], 'exist', 'skipOnError' => true, 'targetClass' => ElementCategory::className(), 'targetAttribute' => ['parent_id' => 'id']],
         ];
     }
@@ -52,9 +53,9 @@ class ElementCategory extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getElements()
+    public function getStoreElements()
     {
-        return $this->hasMany(Element::className(), ['category_id' => 'id']);
+        return $this->hasMany(StoreElement::className(), ['category_id' => 'id']);
     }
 
     /**
