@@ -7,6 +7,7 @@ use yii\widgets\ActiveForm;
 /* @var $this yii\web\View */
 /* @var $searchModel lilhamma\store\models\StoreSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
+/* @var $newStoreModel lilhamma\store\models\Store */
 
 $this->title = 'Stores';
 $this->params['breadcrumbs'][] = $this->title;
