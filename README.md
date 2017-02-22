@@ -1,3 +1,5 @@
+### The module is in early development state, do not even try to use it ###
+
 Installation
 ------------
 
