@@ -1,16 +1,13 @@
 <?php
 
-use yii;
-
 use yii\db\Schema;
 use yii\db\Migration;
 
 class m161115_143011_store_element extends Migration
 {
-
     public function init()
     {
-        $this->db = Yii::$app->getModule('LilhammaStore')->db;
+        $this->db = 'db';
         parent::init();
     }
 
