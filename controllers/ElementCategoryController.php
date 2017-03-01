@@ -38,40 +38,19 @@ class ElementCategoryController extends Controller
         $searchModel = new ElementCategorySearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
+        $newElementCategoryModel = new ElementCategory();
+        
+        if ($newElementCategoryModel->load(Yii::$app->request->post()) && 
+            $newElementCategoryModel->save())
+        {
+                $newElementCategoryModel = new ElementCategory();
+        }
+        
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
+            'newElementCategoryModel' => $newElementCategoryModel
         ]);
-    }
-
-    /**
-     * Displays a single ElementCategory model.
-     * @param integer $id
-     * @return mixed
-     */
-    public function actionView($id)
-    {
-        return $this->render('view', [
-            'model' => $this->findModel($id),
-        ]);
-    }
-
-    /**
-     * Creates a new ElementCategory model.
-     * If creation is successful, the browser will be redirected to the 'view' page.
-     * @return mixed
-     */
-    public function actionCreate()
-    {
-        $model = new ElementCategory();
-
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
-        } else {
-            return $this->render('create', [
-                'model' => $model,
-            ]);
-        }
     }
 
     /**
