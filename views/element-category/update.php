@@ -4,6 +4,7 @@ use yii\helpers\Html;
 
 /* @var $this yii\web\View */
 /* @var $model lilhamma\store\models\ElementCategory */
+/* @var $searchModel lilhamma\store\models\ElementCategorySearch */
 
 $this->title = 'Update Element Category: ' . $model->name;
 $this->params['breadcrumbs'][] = ['label' => 'Element Categories', 'url' => ['index']];
@@ -16,6 +17,7 @@ $this->params['breadcrumbs'][] = 'Update';
 
     <?= $this->render('_form', [
         'model' => $model,
+        'searchModel'=>$searchModel
     ]) ?>
 
 </div>
